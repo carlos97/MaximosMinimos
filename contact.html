@@ -150,6 +150,52 @@ ul {
 }
 /* End Landing Page */
 
+
+#contacto {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+}
+
+#contacto h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#contacto form div {
+    margin-bottom: 15px;
+}
+
+#contacto form div label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#contacto form div input,
+#contacto form div textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Esto asegura que el padding no afecte el ancho total */
+}
+
+#contacto form div button {
+    background-color: #0056b3;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+}
+
+#contacto form div button:hover {
+    background-color: #004494;
+}
+
 </style>
 </head>
 <body>
@@ -167,9 +213,36 @@ ul {
         </header>
         <div class="content">
           <div class="container">
-            <div class="info">
-              <h1>NexaStruct Auditores</h1>
-            </div>
+            <div id="contacto">
+              <h1>Formulario de Contacto</h1>
+              <p>Por favor, complete el siguiente formulario para ponerse en contacto con nosotros.</p>
+      
+              <form action="/enviar-formulario" method="post">
+                  <div>
+                      <label for="nombre">Nombre:</label>
+                      <input type="text" id="nombre" name="nombre" required>
+                  </div>
+      
+                  <div>
+                      <label for="email">Correo Electrónico:</label>
+                      <input type="email" id="email" name="email" required>
+                  </div>
+      
+                  <div>
+                      <label for="asunto">Asunto:</label>
+                      <input type="text" id="asunto" name="asunto" required>
+                  </div>
+      
+                  <div>
+                      <label for="mensaje">Mensaje:</label>
+                      <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                  </div>
+      
+                  <div>
+                      <button type="submit">Enviar</button>
+                  </div>
+              </form>
+          </div>
             <div class="image">
               <img src="https://i.postimg.cc/65QxYYzh/001234.png">
             </div>
